@@ -65,7 +65,7 @@ app.command("/botscemo-mgs", async ({ack, respond}) => {
   await ack();
 
   const MGSQuote = Array("Kept you waiting, huh?", "NO! That is not Solid Snake", "My snake is SOLID.", "METAL GEAR?", "The man who sold the world.", 
-    "What a thriiiill!", "invisible?", "MEOOWWW!", "LIQUIIIIIDDD!!!!", "Snake?... Snake?... SNAAAAAKKEEE!!!");
+    "What a thriiiill!", "invisible?", "MEOOWWW!", "LIQUIIIIIDDD!!!!", "Snake?... Snake?... SNAAAAAKKEEE!!!", "Where do I get the PAL codes to disarm the metal gear?", "Miku Snake");
   const random = Math.floor(Math.random() * MGSQuote.length);
 
   await respond({text: `${MGSQuote[random]}`});
@@ -73,7 +73,7 @@ app.command("/botscemo-mgs", async ({ack, respond}) => {
 });
 
 app.command("/botscemo-coinflip", async ({ack, respond}) => {
-  await ack;
+  await ack();
 
   const HeadsOrTales = Array("!!!HEADS!!!", "!!!TAILS!!!");
   const random = Math.floor(Math.random() * HeadsOrTales.length);
@@ -83,7 +83,7 @@ app.command("/botscemo-coinflip", async ({ack, respond}) => {
 });
 
 app.command("/botscemo-hello", async ({ack, respond}) => {
-  await ack;
+  await ack();
 
   const hello = Array("Hello!", "Hi!", "good day!", "Hi! How are you?", "Top of the morning");
   const random = Math.floor(Math.random() * hello.length);
