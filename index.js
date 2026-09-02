@@ -11,6 +11,7 @@ const app = new App({
   socketMode: true
 });
 
+
 app.command("/botscemo-help", async ({ ack, respond }) => {
   await ack();
   await respond({
@@ -19,7 +20,10 @@ app.command("/botscemo-help", async ({ ack, respond }) => {
 `Available Commands:
 /botscemo-ping - Check bot latency
 /botscemo-catfact - Get a cat fact
-/botscemo-joke - get yourself a joke`
+/botscemo-joke - get yourself a joke
+/botscemo-mgs - METAL GEAR SOLID
+/botscemo-coinflip - Heads or Tales
+/botscemo-hello - say hi botscemo.`
   });
 });
 
@@ -55,6 +59,37 @@ ${response.data.punchline}`
   } catch (err) {
     await respond({ text: "Failed to fetch a joke." });
   }
+});
+
+app.command("/botscemo-mgs", async ({ack, respond}) => {
+  await ack();
+
+  const MGSQuote = Array("Kept you waiting, huh?", "NO! That is not Solid Snake", "My snake is SOLID.", "METAL GEAR?", "The man who sold the world.", 
+    "What a thriiiill!", "invisible?", "MEOOWWW!", "LIQUIIIIIDDD!!!!", "Snake?... Snake?... SNAAAAAKKEEE!!!");
+  const random = Math.floor(Math.random() * MGSQuote.length);
+
+  await respond({text: `${MGSQuote[random]}`});
+
+});
+
+app.command("/botscemo-coinflip", async ({ack, respond}) => {
+  await ack;
+
+  const HeadsOrTales = Array("!!!HEADS!!!", "!!!TAILS!!!");
+  const random = Math.floor(Math.random() * HeadsOrTales.length);
+
+  await respond({text: `${HeadsOrTales[random]}`});
+
+});
+
+app.command("/botscemo-hello", async ({ack, respond}) => {
+  await ack;
+
+  const hello = Array("Hello!", "Hi!", "good day!", "Hi! How are you?", "Top of the morning");
+  const random = Math.floor(Math.random() * hello.length);
+
+  await respond({text: `${hello[random]}`});
+
 });
 
 (async () => {
