@@ -12,10 +12,12 @@ doesn't have good command because I don't need a bot tbh
 
 /botscemo-joke - get yourself a joke
 
-/botscemo-mgs - METAL GEAR SOLID
+/botscemo-mgs - METAL GEAR SOLID memes
 
 /botscemo-coinflip - Heads or Tales
 
-/botscemo-hello - say hi botscemo.
+/botscemo-hello - The bot salutes you
+
+made it in javascript and have uploaded it to a Hackclub Nest server so it shall work 24/7
 
 try it in #botspam https://hackclub.enterprise.slack.com/archives/C0P5NE354
